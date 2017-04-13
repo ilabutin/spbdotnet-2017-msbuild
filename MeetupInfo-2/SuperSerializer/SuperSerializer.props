@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This project file is intended for reuse by every project which requires conversion from .xsd to .cs
+-->
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <BuildDependsOn>TransformXsd2Cs;$(BuildDependsOn)</BuildDependsOn>
+    <CleanDependsOn>$(CleanDependsOn);CleanTransformXsd2Cs</CleanDependsOn>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SuperSerializer</id>
+    <version>1.0</version>
+    <title>Super Serializer</title>
+    <authors>ILN</authors>
+    <owners>ILN</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Cool DLL</description>
+    <copyright>Copyright 2017</copyright>
+  </metadata>
+  <files>
+    <file src="xsd.exe" target="tools\xsd.exe" />	
+  </files>
+</package>

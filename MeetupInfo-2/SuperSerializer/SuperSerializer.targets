@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <Target Name="TransformXsd2Cs">
+    <Message Importance="high" Text="==================" />
+    <Message Importance="high" Text="Converting XSD->CS" />
+    <Message Importance="high" Text="==================" />
+    <Exec Command="$(MSBuildThisFileDirectory)\..\tools\xsd.exe %(Xsd2Cs.FullPath) /namespace:$(TargetName) /classes /order /out:%(RootDir)%(Directory)" />
+  </Target>
+
+  <Target Name="CleanTransformXsd2Cs">
+    <Message Importance="high" Text="==================" />
+    <Message Importance="high" Text="Cleaning XSD->CS" />
+    <Message Importance="high" Text="==================" />
+    <Delete Files="@(Xsd2Cs->'%(RootDir)%(Directory)%(Filename).cs')" />
+  </Target>
+
+  <PropertyGroup>
+    <BuildDependsOn>TransformXsd2Cs;$(BuildDependsOn)</BuildDependsOn>
+    <CleanDependsOn>$(CleanDependsOn);CleanTransformXsd2Cs</CleanDependsOn>
+  </PropertyGroup>
+  
+</Project>
