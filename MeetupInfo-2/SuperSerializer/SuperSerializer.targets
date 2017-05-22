@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <AvailableItemName Include="Xsd2Cs" />
+  </ItemGroup>	
   
-  <Target Name="TransformXsd2Cs">
+  <Target Name="TransformXsd2Cs" Inputs="@(Xsd2Cs)" Outputs="@(Xsd2Cs->'%(RootDir)%(Directory)%(Filename).cs')"	>
     <Message Importance="high" Text="==================" />
     <Message Importance="high" Text="Converting XSD->CS" />
     <Message Importance="high" Text="==================" />

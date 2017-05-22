@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SuperSerializer</id>
-    <version>1.0</version>
+    <version>1.3</version>
     <title>Super Serializer</title>
     <authors>ILN</authors>
     <owners>ILN</owners>
@@ -12,5 +12,10 @@
   </metadata>
   <files>
     <file src="xsd.exe" target="tools\xsd.exe" />	
+    <file src="SuperSerializer.targets" target="build\SuperSerializer.targets" />
+    <file src="SuperSerializerReadme.txt" target="content\SuperSerializerReadme.txt" />
+
+    <file src="install.ps1" target="tools\install.ps1" />
+
   </files>
 </package>
